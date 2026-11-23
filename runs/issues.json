@@ -1,0 +1,4 @@
+[
+  {"id":"I01","date":"2026-11-22","node":"資料取得","observed":"網頁讀取工具無法取得 https://www.chess.com/terms/back-rank-mate。","cause":"原先提出的網址沒有通過取得檢查，無法將它當作已讀資料。","change":"改讀 https://www.chess.com/terms/checkmate-chess 的 Back Rank Mate 與 What Is Checkmate? 章節，存為 S05。","recheck":"成功開啟文章並閱讀章節，匯入後來源總數為五篇。"},
+  {"id":"I02","date":"2026-11-22","node":"棋局範例與驗證","observed":"第一版串擊 FEN 中白王在 g1，黑車在 g8。程式對 Bb3+ 回報 IllegalMoveError。","cause":"初始局面已被將軍，白象移動沒有解除白王的將軍。只看兩個目標是否在斜線上，漏看己方王的安全。","change":"把自製範例的白王移至 h1，並將合法性檢查放在 Wiki 匯入後、查詢與簡報產生之前。","recheck":"五個局面、十步示範 SAN 和戰術關係通過檢查。串擊例子也檢查每一個合法黑王回應後都能 Bxg8。"}
+]

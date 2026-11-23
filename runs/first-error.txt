@@ -1,0 +1,13 @@
+First observed validation failure, 2026-11-22
+Node: draft chess example / legal move validation
+Draft FEN: 6r1/8/4k3/8/8/8/2B5/6K1 w - - 0 1
+Proposed move: Bb3+
+
+The first workflow.py run raised:
+chess.IllegalMoveError: illegal san: 'Bb3+' in 6r1/8/4k3/8/8/8/2B5/6K1 w - - 0 1
+
+Cause: White king g1 was already in check from black rook g8. Bb3+ did not answer that check.
+Correction: move the white king in this composed example to h1.
+Corrected FEN: 6r1/8/4k3/8/8/8/2B5/7K w - - 0 1
+The corrected example passed the rerun recorded in validation.json.
+This record transcribes the error observed in the tool output. It is not a full terminal transcript.

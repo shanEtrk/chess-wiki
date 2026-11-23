@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-22",
+  "environment": "Chromium browser via CUA, local Sites preview",
+  "viewport": {"width":1363,"height":936},
+  "summary": "桌面瀏覽器實測通過 Wiki 搜尋與無結果狀態、五篇來源顯示、文章與簡報直連、五道題的錯誤與正確回饋、重試、十步示範與棋盤重設、12 頁換頁、Home 與方向鍵操作，以及不存在的 Wiki id 返回入口。12 張投影片均無水平溢出。",
+  "checks": [
+    {"name":"Wiki 關鍵字、無結果與清除搜尋","status":"passed"},
+    {"name":"五篇來源與 Wiki 連結","status":"passed"},
+    {"name":"五道題錯誤、正確回饋與重試","status":"passed"},
+    {"name":"鍵盤 Enter 作答","status":"passed"},
+    {"name":"五個棋盤各 64 格，十步示範與重設","status":"passed"},
+    {"name":"12 張投影片與首頁末頁控制","status":"passed"},
+    {"name":"Home 與 ArrowRight 換頁","status":"passed"},
+    {"name":"Wiki 筆記連到對應簡報頁","status":"passed"},
+    {"name":"工作流程頁檢查表","status":"passed"},
+    {"name":"不存在的 Wiki id 返回入口","status":"passed"},
+    {"name":"12 頁桌面水平溢出檢查","status":"passed"},
+    {"name":"手機窄螢幕實測","status":"unverified"}
+  ],
+  "limitations": "本次只完成桌面瀏覽器實測。環境未提供可用的手機視窗調整方式，因此窄螢幕版面仍待實機確認。瀏覽器曾在腳本載入前暫時顯示空白，載入完成後內容正常，未觀察到應用程式錯誤。"
+}

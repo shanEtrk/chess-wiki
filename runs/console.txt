@@ -1,0 +1,62 @@
+{
+  "executed_at_utc": "2026-11-22T12:36:49.648592+00:00",
+  "python_chess": "1.11.2",
+  "source_count": 5,
+  "wiki_count": 5,
+  "retrieval_queries_passed": 5,
+  "examples": [
+    {
+      "note": "fork",
+      "valid_position": true,
+      "san_moves": [
+        "Nf7+",
+        "Kh7",
+        "Nxd8"
+      ],
+      "state_count": 4,
+      "tactic_check": "passed"
+    },
+    {
+      "note": "pin",
+      "valid_position": true,
+      "san_moves": [],
+      "state_count": 1,
+      "tactic_check": "passed"
+    },
+    {
+      "note": "skewer",
+      "valid_position": true,
+      "san_moves": [
+        "Bb3+",
+        "Kf6",
+        "Bxg8"
+      ],
+      "state_count": 4,
+      "tactic_check": "passed"
+    },
+    {
+      "note": "discovered",
+      "valid_position": true,
+      "san_moves": [
+        "Nf6+",
+        "Kh6",
+        "Rxe8"
+      ],
+      "state_count": 4,
+      "tactic_check": "passed"
+    },
+    {
+      "note": "back-rank",
+      "valid_position": true,
+      "san_moves": [
+        "Re8#"
+      ],
+      "state_count": 2,
+      "tactic_check": "passed"
+    }
+  ],
+  "input_hashes": {
+    "sources/articles.json": "02ad8963f3cfde511537a10b9407831fd8deaa69532e46d07b7f43c01dd80285",
+    "wiki/notes.json": "8474f5395815f9eeedd9725817b35a67d2f8158e9f13c911b979f7da2c72a344"
+  }
+}
