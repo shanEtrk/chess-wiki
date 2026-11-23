@@ -28,24 +28,6 @@ python -m http.server 8000 --directory docs
 
 `sources/articles.json` 的來源編號對應 `sources/S01.md` 至 `S05.md`。`wiki/notes.json` 經匯入後，產生 `wiki/entries/` 筆記。五個實際檢索輸出位於 `runs/retrieval.json`。`runs/validation.json` 記錄執行時間、輸入雜湊、五個局面及合法棋步檢查。`runs/issues.json` 與 `runs/first-error.txt` 保留兩個實際問題。
 
-## 流程
-
-```mermaid
-flowchart TD
-  A[討論主題] --> B[取得與檢查來源]
-  B --> C[匯入 Wiki]
-  C --> D[檢查局面與第一步]
-  D --> E[查詢 Wiki]
-  E --> F[整理教學內容]
-  F --> G[產生 HTML]
-  G --> H[瀏覽器檢查]
-  B -- 來源無法取得 --> B
-  D -- 非法棋步 --> C
-  E -- 內容不足 --> B
-  F -- 定義缺少條件 --> C
-  H -- 畫面或互動錯誤 --> G
-```
-
 ## 發布
 
 可將完整專案上傳到新的 GitHub repository，設定 GitHub Pages 使用 `main` 分支的 `/docs`。保留 `docs/.nojekyll`。目前 ChatGPT Sites 的發布設定位於 `.openai/hosting.json`，其中使用打包後的 `dist/`。要搬到新 Sites 專案時，使用該專案的新身分設定。
