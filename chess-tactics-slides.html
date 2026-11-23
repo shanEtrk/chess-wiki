@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><base href="https://chess-tactics-wiki.arisencress8.chatgpt.site/"><meta name="viewport" content="width=device-width, initial-scale=1"><title>西洋棋戰術入門 · 教學簡報</title><meta name="description" content="由棋盤筆記 Wiki 產生的 12 頁教學 HTML 簡報，包含五個戰術與互動練習。"><style>:root{color-scheme:light;--paper:#f5f7f2;--white:#fff;--ink:#123c32;--muted:#4d665e;--line:#d5ded6;--green:#123c32;--gold:#f3ce7e;--soft:#e5ece4;font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif;color:var(--ink);background:var(--paper);font-size:16px}
+*{box-sizing:border-box}body{margin:0}a{color:inherit;text-underline-offset:4px}button,input{font:inherit}button,a,input{touch-action:manipulation}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #b06a00;outline-offset:4px}button:disabled{cursor:default;opacity:.45}[hidden]{display:none!important}h1,h2,h3,p,figure{margin:0}p,li{line-height:1.8}.wrap{width:min(1160px,calc(100% - 64px));margin:auto}.topbar{border-bottom:1px solid var(--line);background:var(--paper)}.topbar .wrap{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:1.15rem;font-weight:800;text-decoration:none;display:flex;align-items:center;gap:10px}.brand-mark{font-size:1.9rem}.topbar nav{display:flex;gap:25px;font-size:.92rem;font-weight:700}.topbar nav a{text-decoration:none}.topbar nav a[aria-current]{border-bottom:2px solid var(--green)}.hero{padding:52px 0 42px;display:grid;grid-template-columns:1.3fr 1fr;align-items:center;gap:64px}.eyebrow{font-size:.85rem;letter-spacing:.12em;font-weight:800;color:var(--muted);margin-bottom:15px}h1{font-size:clamp(2.3rem,5vw,4.4rem);line-height:1.25;letter-spacing:-.035em}.hero p:not(.eyebrow){max-width:34em;color:var(--muted);margin:19px 0 25px}.primary,.secondary{display:inline-flex;padding:12px 20px;border:1px solid var(--green);border-radius:6px;background:var(--green);color:#fff;text-decoration:none;font-weight:700;align-items:center;justify-content:center;gap:8px}.secondary{background:transparent;color:var(--ink)}.primary:hover{background:#245a4a}.hero figure{max-width:340px;justify-self:end;width:100%;background:var(--green);padding:14px;border-radius:10px}.hero figcaption{color:#fff;padding-top:10px;font-size:.9rem;text-align:center}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:20px;margin:16px 0 24px}h2{font-size:1.8rem}.section-heading p,.muted{color:var(--muted)}.search-label{display:grid;gap:6px;font-size:.875rem;color:var(--muted)}input[type=search]{min-height:46px;border:1px solid #96ab9c;border-radius:6px;background:#fff;padding:10px 13px;color:var(--ink);width:min(100%,320px)}.note-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding-bottom:45px}.note-card{display:flex;flex-direction:column;background:var(--white);padding:24px;border:1px solid var(--line);border-radius:8px;text-decoration:none}.note-card:hover{border-color:#7e9b88}.note-card h3{font-size:1.4rem;margin-bottom:3px}.english{font-family:Georgia,serif;font-style:italic;color:var(--muted)}.note-card p{margin:15px 0 20px;color:var(--muted);font-size:.95rem}.note-card .card-bottom{margin-top:auto;font-size:.85rem;font-weight:700}.index-foot{padding:25px 0;border-top:1px solid var(--line);color:var(--muted)}.index-foot p{max-width:75em}.footer{padding:25px 0;border-top:1px solid var(--line);font-size:.875rem;color:var(--muted);display:flex;gap:20px;justify-content:space-between}.article-header{padding:40px 0 24px;max-width:800px}.article-header .back-link{display:inline-block;margin-bottom:24px}.article-header h1{font-size:3rem}.article-header .english{margin-top:10px;font-size:1.2rem}.article-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;padding-bottom:45px;align-items:start}.article-copy section{margin-bottom:28px}.article-copy h2{font-size:1.2rem;margin-bottom:9px}.article-copy .callout{background:var(--soft);border-left:3px solid #3f7259;padding:15px}.board{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));aspect-ratio:1;container-type:inline-size;border-radius:4px;overflow:hidden}.square{position:relative;aspect-ratio:1;display:grid;place-items:center;font:8.4cqw/1 "DejaVu Sans",serif}.square.light{background:#e2e9d9;--coord:#1f4c3a}.square.dark{background:#709483;--coord:#112d24}.square.white{color:#fffdf5;-webkit-text-stroke:1px #223b30;text-shadow:0 1px 1px #223b30}.square.black{color:#10281e}.square.marked{background:var(--gold);box-shadow:inset 0 0 0 2px #936915}.square[data-rank]::before,.square[data-file]::after{position:absolute;font:700 2.5cqw/1 sans-serif;color:var(--coord);-webkit-text-stroke:0;text-shadow:none}.square[data-rank]::before{content:attr(data-rank);top:4px;left:4px}.square[data-file]::after{content:attr(data-file);bottom:4px;right:4px}.board-figure{background:#fff;border:1px solid var(--line);padding:12px;border-radius:9px}.board-figure figcaption{padding:9px 0 2px;font-size:.875rem;text-align:center}.board-controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.board-controls button,.quiz button,.small-button{border:1px solid #9cad9e;background:#fff;color:var(--ink);padding:10px 15px;min-height:44px;border-radius:5px}.board-controls button:hover,.quiz button:hover{background:#e6eee5}.sources-line{font-size:.875rem;color:var(--muted);margin:12px 0;line-height:1.65}.sources-line a{margin-right:10px}.related{display:flex;gap:18px;flex-wrap:wrap}.page-heading{padding:40px 0 28px}.page-heading h1{font-size:2.8rem}.page-heading p{margin-top:14px;max-width:800px;color:var(--muted)}.source-list{padding-bottom:40px}.source-entry{padding:24px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:180px minmax(0,1fr);gap:25px}.source-entry h2{font-size:1.35rem;margin-bottom:8px}.source-entry p{margin:8px 0}.source-meta{font-size:.875rem;color:var(--muted)}.source-meta strong{display:block;font-size:1rem;color:var(--ink);margin-bottom:5px}.prose{max-width:900px;padding-bottom:40px}.prose h2{margin:30px 0 12px}.prose h3{font-size:1.1rem;margin:20px 0 7px}.prose p{margin:10px 0}.flow{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;padding:0;counter-reset:flow}.flow li{border:1px solid var(--line);background:#fff;border-radius:6px;padding:15px;counter-increment:flow}.flow strong{display:block}.flow li::before{content:counter(flow);display:inline-block;color:var(--muted);font-size:.85rem;margin-bottom:4px}.flow small{display:block;font-size:.875rem;color:var(--muted)}.return-path{background:var(--soft);padding:15px;border-left:3px solid #447459}table{border-collapse:collapse;width:100%;font-size:.95rem}th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.7}th{background:var(--soft)}.table-scroll{overflow-x:auto}code,pre{font-family:"Courier New",monospace;font-size:.9rem}pre{background:#14382f;color:#edf4ea;padding:20px;overflow-x:auto;border-radius:5px}.success{color:#1e6144;font-weight:700}.quiz{margin-top:15px}.quiz .options{display:grid;gap:9px;margin-top:16px}.quiz [aria-pressed=true]{background:var(--green);color:#fff}.feedback:not(:empty){margin-top:14px;padding:13px;background:#f8e8bf;line-height:1.7}.reset-quiz{margin-top:12px;text-decoration:underline;border:0;background:none;color:var(--ink);padding:9px 0}.slides-body{background:var(--paper);min-height:100dvh;display:flex;flex-direction:column}.deck-header{border-bottom:1px solid var(--line);min-height:68px;display:flex;align-items:center;justify-content:space-between;padding:12px 32px;gap:15px}.deck-header nav{display:flex;gap:20px;font-size:.875rem}.deck-header a{text-decoration:none}.deck{width:min(1200px,100%);margin:auto;padding:34px 48px;flex:1;display:flex;align-items:center}.slide{width:100%}.slide h1{font-size:clamp(2.5rem,5.8vw,5rem)}.slide h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1.3;letter-spacing:-.035em}.slide .lead{font-size:clamp(1.2rem,2.1vw,1.6rem);line-height:1.75;margin-top:23px;max-width:34em}.slide .detail{font-size:1.1rem;line-height:1.8;margin-top:18px;max-width:38em;color:var(--muted)}.slide-grid{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:55px}.slide .board-figure{width:100%;max-width:370px;justify-self:end}.slide ul{font-size:1.25rem;padding-left:25px}.slide .sources-line{margin-top:25px}.slide .quiz h3{font-size:1.05rem;font-weight:600;line-height:1.6}.slide .quiz .options{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.slide .quiz button{font-size:.94rem;padding:10px 5px}.slide .feedback:not(:empty){font-size:.94rem}.deck-footer{padding:14px 32px 18px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}.deck-footer button{border:1px solid #81998b;background:#fff;color:var(--ink);padding:10px 18px;border-radius:5px;min-height:44px}.deck-footer button:last-of-type{justify-self:end;background:var(--green);color:#fff}.progress-area{text-align:center;font-size:.875rem;color:var(--muted)}progress{display:block;width:180px;height:5px;accent-color:var(--green);margin:8px auto 0}.keyboard-help{font-size:.8rem;display:block;margin-top:6px}.cover-line{color:#63826d;font-size:clamp(2.3rem,5vw,4.5rem);font-weight:800;margin-top:12px}.cover-caption{font-size:.9rem;line-height:1.7;color:var(--muted);margin-top:22px}.comparison td{font-size:1.08rem}.source-deck-list{font-size:1rem;line-height:1.8;margin:20px 0}.source-deck-list li{margin-bottom:6px}.standout{background:var(--green);color:#fff;padding:20px 25px;border-radius:7px;margin-top:23px;font-size:1.2rem}.print-only{display:none}#deck-status:empty{display:none}
+@media(min-width:950px){.slides-body .deck{min-height:calc(100dvh - 165px)}}
+@media(max-width:800px){.wrap{width:calc(100% - 36px)}.hero{gap:25px}.topbar .wrap{flex-wrap:wrap;padding-block:12px}.topbar nav{gap:16px}.note-list{grid-template-columns:repeat(2,minmax(0,1fr))}.article-layout{gap:25px}.deck{padding:28px}.slide-grid{gap:25px}.slide .board-figure{max-width:320px}.flow{grid-template-columns:repeat(2,minmax(0,1fr))}.deck-header{padding:12px 20px}}
+@media(max-width:600px){.hero,.article-layout,.slide-grid{grid-template-columns:1fr}.hero{padding-top:30px}.hero figure{justify-self:start;max-width:260px}.section-heading{align-items:start;flex-direction:column}.search-label,input[type=search]{width:100%}.note-list{grid-template-columns:1fr}.source-entry{grid-template-columns:1fr;gap:9px}.deck{padding:24px 20px}.slide .board-figure{justify-self:center;max-width:300px}.slide .lead{font-size:1.2rem}.slide .sources-line{margin-top:16px}.deck-header{align-items:start;flex-wrap:wrap}.deck-header nav{gap:14px}.deck-footer{padding:12px;gap:8px}.deck-footer button{padding:10px 12px}.keyboard-help{display:none}progress{width:110px}.article-header h1{font-size:2.4rem}.footer{flex-wrap:wrap}.flow{grid-template-columns:1fr}.comparison th,.comparison td{font-size:.95rem;padding:10px}}
+@media print{.topbar,.deck-header,.deck-footer,.board-controls,.quiz,.footer,.no-print{display:none!important}.deck{display:block;padding:0}.slide[hidden]{display:block!important}.slide{break-after:page;padding:30px 15px;min-height:90vh}.slide-grid{grid-template-columns:1fr 1fr}.slides-body{background:white}.print-only{display:block}.slide .board-figure{max-width:300px}body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+.deck-footer button:first-of-type{justify-self:start}
+</style></head>
+<body class="slides-body"><header class="deck-header"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">♞</span>棋盤筆記</a><nav aria-label="簡報工具"><a href="./index.html">返回 Wiki</a><a href="./workflow.html">製作流程</a><button class="small-button" type="button" id="fullscreen">全螢幕</button></nav></header>
+<main class="deck" id="deck"><noscript>請啟用 JavaScript 以瀏覽這份教學簡報。</noscript></main><div id="deck-status" role="status"></div><footer class="deck-footer"><button id="previous" type="button">上一頁</button><div class="progress-area"><span id="slide-count" aria-live="polite"></span><progress id="slide-progress" aria-label="簡報進度"></progress><span class="keyboard-help">左右方向鍵換頁</span></div><button id="next" type="button">下一頁</button></footer><script>window.WIKI_DATA = {"sources": [{"id": "S01", "title": "Fork in Chess", "publisher": "Chess.com", "url": "https://www.chess.com/terms/fork-chess", "section": "What Is A Fork In Chess? / How To Take Advantage Of A Fork", "accessed": "2026-11-22", "summary": "雙攻由同一顆棋子同時攻擊至少兩個目標。若其中一個目標是國王，對手必須先解除將軍，可能留下另一個目標。", "supports": ["單一棋子同時攻擊多個目標", "帶將軍的雙攻有較強的迫使性"]}, {"id": "S02", "title": "Pin", "publisher": "Chess.com", "url": "https://www.chess.com/terms/pin-chess", "section": "What Is An Absolute Pin? / What Is A Relative Pin?", "accessed": "2026-11-22", "summary": "牽制利用一條攻擊線限制前方棋子的活動。絕對牽制涉及後方國王的安全，相對牽制則可能讓後方的重要棋子受損。", "supports": ["絕對牽制與國王安全有關", "相對牽制中移動前方棋子可能仍屬合法"]}, {"id": "S03", "title": "Skewer", "publisher": "Chess.com", "url": "https://www.chess.com/terms/skewer-chess", "section": "What Is A Skewer In Chess? / What Is The Difference Between A Skewer And A Pin?", "accessed": "2026-11-22", "summary": "串擊沿著直線或斜線攻擊前方較重要的目標。前方目標移開後，後方棋子就可能被吃掉。目標在攻擊線上的先後位置是辨識重點。", "supports": ["前方較重要的目標先受攻擊", "前方目標移開後可暴露後方棋子"]}, {"id": "S04", "title": "Discovered Attack", "publisher": "Chess.com", "url": "https://www.chess.com/terms/discovered-attack-chess", "section": "What Is A Discovered Attack In Chess?", "accessed": "2026-11-22", "summary": "閃擊是把擋住路線的己方棋子移開，讓另一顆己方棋子形成攻擊。如果露出來的攻擊直接將軍，稱為閃將。", "supports": ["移開一顆棋子以露出另一顆棋子的攻擊", "露出的棋子攻擊國王才是閃將"]}, {"id": "S05", "title": "Checkmate & Checkmate Patterns", "publisher": "Chess.com", "url": "https://www.chess.com/terms/checkmate-chess", "section": "What Is Checkmate? / Back Rank Mate", "accessed": "2026-11-22", "summary": "將死必須同時滿足國王被將軍，以及沒有任何合法解將走法。底線將死利用守方自己的棋子封住王的逃路，再由車或后控制底線。", "supports": ["被將軍且無合法解將走法才是將死", "底線將死利用守方棋子封住王的逃路"]}], "notes": [{"id": "fork", "title": "騎士雙攻", "english": "Knight fork", "sourceIds": ["S01"], "related": ["discovered", "pin"], "keywords": ["雙攻", "騎士", "fork", "馬"], "definition": "一顆棋子同時攻擊兩個以上目標。本課用騎士同時將軍並攻擊黑后。", "recognize": "先找騎士能將軍的落點，再檢查同一落點是否也攻擊另一顆棋子。", "boundary": "雙攻能否得子仍取決於對手能否吃掉攻擊者或同時解決威脅。", "example": "白馬從 e5 到 f7。它同時攻擊 h8 的黑王和 d8 的黑后。", "fen": "3q3k/8/8/4N3/8/8/8/6K1 w - - 0 1", "moves": ["Nf7+", "Kh7", "Nxd8"], "focus": ["f7", "h8", "d8"], "question": "白方哪一步能同時將軍並攻擊黑后？", "choices": ["Nd7", "Nf7+", "Ng6+"], "answer": 1, "explanation": "Nf7+ 同時攻擊 h8 與 d8。圖示變化為 1.Nf7+ Kh7 2.Nxd8，白馬吃下黑后。", "slideTitle": "騎士雙攻", "slideText": "騎士到 f7 後，同時威脅國王和黑后。黑方要先處理將軍。", "states": [{"fen": "3q3k/8/8/4N3/8/8/8/6K1 w - - 0 1", "label": "初始局面"}, {"fen": "3q3k/5N2/8/8/8/8/8/6K1 b - - 1 1", "label": "Nf7+"}, {"fen": "3q4/5N1k/8/8/8/8/8/6K1 w - - 2 2", "label": "Kh7"}, {"fen": "3N4/7k/8/8/8/8/8/6K1 b - - 0 2", "label": "Nxd8"}]}, {"id": "pin", "title": "絕對牽制", "english": "Absolute pin", "sourceIds": ["S02"], "related": ["skewer", "fork"], "keywords": ["牽制", "絕對", "相對", "pin"], "definition": "棋子擋在攻擊者和己方國王之間。它不能走出攻擊線，讓己方國王暴露在將軍之下。", "recognize": "沿著國王所在的直線或斜線，找出攻擊者與中間的阻擋棋子。", "boundary": "被牽制的車或象有時仍能沿著牽制線移動，或吃掉攻擊者。本例的黑馬每一步都會離開 e 線，所以無法移動。", "example": "e1 的白車、e7 的黑馬、e8 的黑王位於同一條 e 線。", "fen": "4k3/4n3/8/8/8/8/8/4R1K1 b - - 0 1", "moves": [], "focus": ["e1", "e7", "e8"], "question": "輪到黑方，哪顆棋子因絕對牽制而無法移動？", "choices": ["e7 的黑馬", "e8 的黑王", "e1 的白車"], "answer": 0, "explanation": "黑馬擋住白車通往黑王的 e 線。黑馬的任何一步都會露出將軍，因此沒有合法的黑馬走法。", "slideTitle": "絕對牽制", "slideText": "黑馬擋在白車與黑王之間。黑馬一跳開，黑王就會被將軍。", "states": [{"fen": "4k3/4n3/8/8/8/8/8/4R1K1 b - - 0 1", "label": "初始局面"}]}, {"id": "skewer", "title": "串擊", "english": "Skewer", "sourceIds": ["S03", "S02"], "related": ["pin", "discovered"], "keywords": ["串擊", "串攻", "skewer", "直線"], "definition": "沿著一條線先攻擊前方較重要的目標。前方目標移開後，後方棋子就暴露出來。", "recognize": "找出排在同一直線或斜線上的兩個目標，確認較重要的目標位於前方。", "boundary": "要檢查守方能否吃掉攻擊者、擋住路線，或移動前方目標時順便保護後方棋子。", "example": "白象走到 b3，沿著 b3–e6–g8 斜線將軍。黑王離開後，白象可吃下 g8 的車。", "fen": "6r1/8/4k3/8/8/8/2B5/7K w - - 0 1", "moves": ["Bb3+", "Kf6", "Bxg8"], "focus": ["b3", "e6", "g8"], "question": "白方哪一步能沿斜線串擊黑王與黑車？", "choices": ["Bd3", "Ba4", "Bb3+"], "answer": 2, "explanation": "Bb3+ 的斜線穿過 e6 的黑王，延伸到 g8 的黑車。圖示變化為 1.Bb3+ Kf6 2.Bxg8。", "slideTitle": "串擊", "slideText": "白象到 b3 將軍。較重要的黑王在前，黑車在後。", "states": [{"fen": "6r1/8/4k3/8/8/8/2B5/7K w - - 0 1", "label": "初始局面"}, {"fen": "6r1/8/4k3/8/8/1B6/8/7K b - - 1 1", "label": "Bb3+"}, {"fen": "6r1/8/5k2/8/8/1B6/8/7K w - - 2 2", "label": "Kf6"}, {"fen": "6B1/8/5k2/8/8/8/8/7K b - - 0 2", "label": "Bxg8"}]}, {"id": "discovered", "title": "閃擊", "english": "Discovered attack", "sourceIds": ["S04"], "related": ["fork", "skewer"], "keywords": ["閃擊", "閃將", "discovered", "移開"], "definition": "移開擋路的己方棋子，讓另一顆己方棋子露出攻擊。", "recognize": "先找被己方棋子擋住的車、象或后，再看阻擋者能否帶著威脅離開。", "boundary": "閃將是露出來的棋子將軍。本例由移動的騎士將軍，白車露出後攻擊黑后，所以屬於帶將軍的閃擊。", "example": "白馬離開 e4 到 f6，將軍黑王。e1 白車同時露出對 e8 黑后的攻擊。", "fen": "4q3/7k/8/8/4N3/8/8/4R1K1 w - - 0 1", "moves": ["Nf6+", "Kh6", "Rxe8"], "focus": ["e1", "e8", "f6", "h7"], "question": "哪一步能讓白車露出對黑后的攻擊，同時用馬將軍？", "choices": ["Nc5", "Nf6+", "Nd2"], "answer": 1, "explanation": "Nf6+ 移開 e4 的白馬。騎士將軍 h7 黑王，白車則沿 e 線攻擊 e8 黑后。圖示續走 Kh6、Rxe8。", "slideTitle": "閃擊", "slideText": "白馬到 f6 將軍，讓開 e 線。白車因此攻擊黑后。", "states": [{"fen": "4q3/7k/8/8/4N3/8/8/4R1K1 w - - 0 1", "label": "初始局面"}, {"fen": "4q3/7k/5N2/8/8/8/8/4R1K1 b - - 1 1", "label": "Nf6+"}, {"fen": "4q3/8/5N1k/8/8/8/8/4R1K1 w - - 2 2", "label": "Kh6"}, {"fen": "4R3/8/5N1k/8/8/8/8/6K1 b - - 0 2", "label": "Rxe8"}]}, {"id": "back-rank", "title": "底線將死", "english": "Back-rank mate", "sourceIds": ["S05"], "related": ["pin", "fork"], "keywords": ["底線", "將死", "checkmate", "back rank"], "definition": "守方國王的逃路被自己的棋子封住，攻方用車或后控制底線完成將死。", "recognize": "先確認將軍，再檢查逃王、吃掉攻擊者或擋住攻擊線等合法解將方法。", "boundary": "有將軍不一定有將死。只要還有一個合法解將走法，就不能寫 #。", "example": "黑王 g8 前面有 f7、g7、h7 三個黑兵。白車從 e1 到 e8 封鎖底線。", "fen": "6k1/5ppp/8/8/8/8/8/4R1K1 w - - 0 1", "moves": ["Re8#"], "focus": ["e8", "f8", "g8", "h8", "f7", "g7", "h7"], "question": "白方哪一步能立刻將死黑王？", "choices": ["Re8#", "Re7", "Ra1"], "answer": 0, "explanation": "Re8# 控制第 8 橫列。黑王的前方被自己的兵擋住，也沒有其他合法解將走法。", "slideTitle": "底線將死", "slideText": "白車到 e8。黑王兩側都受攻擊，前方又被自己的兵擋住。", "states": [{"fen": "6k1/5ppp/8/8/8/8/8/4R1K1 w - - 0 1", "label": "初始局面"}, {"fen": "4R1k1/5ppp/8/8/8/8/8/6K1 b - - 1 1", "label": "Re8#"}]}], "retrieval": [{"query": "騎士 雙攻", "top_note": "fork", "source_ids": ["S01"], "used_for": "簡報的「騎士雙攻」頁與練習題", "definition": "一顆棋子同時攻擊兩個以上目標。本課用騎士同時將軍並攻擊黑后。"}, {"query": "絕對 牽制", "top_note": "pin", "source_ids": ["S02"], "used_for": "簡報的「絕對牽制」頁與練習題", "definition": "棋子擋在攻擊者和己方國王之間。它不能走出攻擊線，讓己方國王暴露在將軍之下。"}, {"query": "串擊", "top_note": "skewer", "source_ids": ["S03", "S02"], "used_for": "簡報的「串擊」頁與練習題", "definition": "沿著一條線先攻擊前方較重要的目標。前方目標移開後，後方棋子就暴露出來。"}, {"query": "閃擊 閃將", "top_note": "discovered", "source_ids": ["S04"], "used_for": "簡報的「閃擊」頁與練習題", "definition": "移開擋路的己方棋子，讓另一顆己方棋子露出攻擊。"}, {"query": "底線 將死", "top_note": "back-rank", "source_ids": ["S05"], "used_for": "簡報的「底線將死」頁與練習題", "definition": "守方國王的逃路被自己的棋子封住，攻方用車或后控制底線完成將死。"}], "validation": {"executed_at_utc": "2026-11-22T12:36:49.648592+00:00", "python_chess": "1.11.2", "source_count": 5, "wiki_count": 5, "retrieval_queries_passed": 5, "examples": [{"note": "fork", "valid_position": true, "san_moves": ["Nf7+", "Kh7", "Nxd8"], "state_count": 4, "tactic_check": "passed"}, {"note": "pin", "valid_position": true, "san_moves": [], "state_count": 1, "tactic_check": "passed"}, {"note": "skewer", "valid_position": true, "san_moves": ["Bb3+", "Kf6", "Bxg8"], "state_count": 4, "tactic_check": "passed"}, {"note": "discovered", "valid_position": true, "san_moves": ["Nf6+", "Kh6", "Rxe8"], "state_count": 4, "tactic_check": "passed"}, {"note": "back-rank", "valid_position": true, "san_moves": ["Re8#"], "state_count": 2, "tactic_check": "passed"}], "input_hashes": {"sources/articles.json": "02ad8963f3cfde511537a10b9407831fd8deaa69532e46d07b7f43c01dd80285", "wiki/notes.json": "8474f5395815f9eeedd9725817b35a67d2f8158e9f13c911b979f7da2c72a344"}}, "issues": [{"id": "I01", "date": "2026-11-22", "node": "資料取得", "observed": "網頁讀取工具無法取得 https://www.chess.com/terms/back-rank-mate。", "cause": "原先提出的網址沒有通過取得檢查，無法將它當作已讀資料。", "change": "改讀 https://www.chess.com/terms/checkmate-chess 的 Back Rank Mate 與 What Is Checkmate? 章節，存為 S05。", "recheck": "成功開啟文章並閱讀章節，匯入後來源總數為五篇。"}, {"id": "I02", "date": "2026-11-22", "node": "棋局範例與驗證", "observed": "第一版串擊 FEN 中白王在 g1，黑車在 g8。程式對 Bb3+ 回報 IllegalMoveError。", "cause": "初始局面已被將軍，白象移動沒有解除白王的將軍。只看兩個目標是否在斜線上，漏看己方王的安全。", "change": "把自製範例的白王移至 h1，並將合法性檢查放在 Wiki 匯入後、查詢與簡報產生之前。", "recheck": "五個局面、十步示範 SAN 和戰術關係通過檢查。串擊例子也檢查每一個合法黑王回應後都能 Bxg8。"}], "browserChecks": {"date": "2026-11-22", "environment": "Chromium browser via CUA, local Sites preview", "viewport": {"width": 1363, "height": 936}, "summary": "桌面瀏覽器實測通過 Wiki 搜尋與無結果狀態、五篇來源顯示、文章與簡報直連、五道題的錯誤與正確回饋、重試、十步示範與棋盤重設、12 頁換頁、Home 與方向鍵操作，以及不存在的 Wiki id 返回入口。12 張投影片均無水平溢出。", "checks": [{"name": "Wiki 關鍵字、無結果與清除搜尋", "status": "passed"}, {"name": "五篇來源與 Wiki 連結", "status": "passed"}, {"name": "五道題錯誤、正確回饋與重試", "status": "passed"}, {"name": "鍵盤 Enter 作答", "status": "passed"}, {"name": "五個棋盤各 64 格，十步示範與重設", "status": "passed"}, {"name": "12 張投影片與首頁末頁控制", "status": "passed"}, {"name": "Home 與 ArrowRight 換頁", "status": "passed"}, {"name": "Wiki 筆記連到對應簡報頁", "status": "passed"}, {"name": "工作流程頁檢查表", "status": "passed"}, {"name": "不存在的 Wiki id 返回入口", "status": "passed"}, {"name": "12 頁桌面水平溢出檢查", "status": "passed"}, {"name": "手機窄螢幕實測", "status": "unverified"}], "limitations": "本次只完成桌面瀏覽器實測。環境未提供可用的手機視窗調整方式，因此窄螢幕版面仍待實機確認。瀏覽器曾在腳本載入前暫時顯示空白，載入完成後內容正常，未觀察到應用程式錯誤。"}};
+</script><script>const DATA = window.WIKI_DATA;
+const escapeText = value => String(value).replace(/[&<>"']/g, character => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[character]));
+const PIECES = {k:"♚",q:"♛",r:"♜",b:"♝",n:"♞",p:"♟"};
+const NAMES = {k:"王",q:"后",r:"車",b:"象",n:"馬",p:"兵"};
+
+function boardHTML(fen, focus = []) {
+  const rows = fen.split(" ")[0].split("/");
+  const labels = [];
+  let cells = "";
+  rows.forEach((row, rowIndex) => {
+    let column = 0;
+    for (const character of row) {
+      const count = /[1-8]/.test(character) ? Number(character) : 1;
+      for (let empty = 0; empty < count; empty++) {
+        const piece = /[1-8]/.test(character) ? "" : character;
+        const file = "abcdefgh"[column];
+        const rank = 8 - rowIndex;
+        const square = file + rank;
+        const color = piece === piece.toUpperCase() ? "white" : "black";
+        if (piece) labels.push(square + (color === "white" ? "白" : "黑") + NAMES[piece.toLowerCase()]);
+        cells += `<span aria-hidden="true" class="square ${(rowIndex + column) % 2 ? "dark" : "light"} ${piece ? color : ""} ${focus.includes(square) ? "marked" : ""}" ${column === 0 ? `data-rank="${rank}"` : ""} ${rank === 1 ? `data-file="${file}"` : ""}>${PIECES[piece.toLowerCase()] ?? ""}</span>`;
+        column++;
+      }
+    }
+  });
+  return `<div class="board" role="img" aria-label="${escapeText(labels.join("、") + (focus.length ? "。標記格 " + focus.join("、") : ""))}">${cells}</div>`;
+}
+
+function sourceLinks(note) {
+  return `<div class="sources-line">Wiki <a href="./wiki.html?topic=${note.id}">${escapeText(note.title)}</a>來源 ${note.sourceIds.map(id => `<a href="./sources.html#${id}">${id}</a>`).join("")}</div>`;
+}
+
+function mountExample(container, note, interactive = true) {
+  container.innerHTML = `<figure class="board-figure"><div class="board-host"></div><figcaption aria-live="polite"></figcaption></figure>`;
+  let step = 0;
+  const board = container.querySelector(".board-host");
+  const caption = container.querySelector("figcaption");
+  const show = () => {
+    const state = note.states[step];
+    board.innerHTML = boardHTML(state.fen, step ? note.focus : []);
+    caption.textContent = step ? `示範第 ${step} 步 · ${state.label}` : `自製局面 · ${note.fen.split(" ")[1] === "w" ? "白方" : "黑方"}行棋`;
+  };
+  if (interactive && note.states.length > 1) {
+    const controls = document.createElement("div");
+    controls.className = "board-controls";
+    controls.innerHTML = '<button type="button">下一步示範</button><button type="button">重設棋盤</button>';
+    const [next, reset] = controls.querySelectorAll("button");
+    next.addEventListener("click", () => {
+      step++;
+      show();
+      next.disabled = step === note.states.length - 1;
+    });
+    reset.addEventListener("click", () => { step = 0; next.disabled = false; show(); });
+    container.append(controls);
+  }
+  show();
+}
+
+function mountQuiz(container, note) {
+  container.className = "quiz";
+  container.innerHTML = `<h3 id="question-${note.id}">${escapeText(note.question)}</h3><div class="options" role="group" aria-labelledby="question-${note.id}"></div><div class="feedback" role="status"></div><button type="button" class="reset-quiz" hidden>重新作答</button>`;
+  const options = container.querySelector(".options");
+  const feedback = container.querySelector(".feedback");
+  const reset = container.querySelector(".reset-quiz");
+  note.choices.forEach((choice, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = choice;
+    button.setAttribute("aria-pressed", "false");
+    button.addEventListener("click", () => {
+      options.querySelector('[aria-pressed="true"]')?.setAttribute("aria-pressed", "false");
+      button.setAttribute("aria-pressed", "true");
+      feedback.textContent = (index === note.answer ? "答對了。" : "再想想。") + note.explanation;
+      reset.hidden = false;
+    });
+    options.append(button);
+  });
+  reset.addEventListener("click", () => {
+    feedback.textContent = "";
+    options.querySelector('[aria-pressed="true"]')?.setAttribute("aria-pressed", "false");
+    reset.hidden = true;
+    options.firstElementChild.focus();
+  });
+}
+</script><script>const deck = document.querySelector("#deck");
+const sections = [];
+
+function addSlide(markup, label) {
+  const section = document.createElement("section");
+  section.className = "slide";
+  section.setAttribute("aria-label", label);
+  section.innerHTML = markup;
+  section.hidden = true;
+  deck.append(section);
+  sections.push(section);
+  return section;
+}
+
+addSlide(`<div class="slide-grid"><div><p class="eyebrow">給西洋棋初學者的教學簡報</p><h1>西洋棋<br>戰術入門</h1><p class="cover-line">五個基本戰術</p><p class="lead">認識雙攻、牽制、串擊、閃擊與底線將死。每個主題都有自製棋局和一道練習。</p><p class="cover-caption">知識來源為本專案的 <a href="./index.html">LLM Wiki</a>。先讀概念，再用「下一步示範」觀察棋子變化。</p></div><figure class="board-figure">${boardHTML(DATA.notes[0].fen)}<figcaption>自製局面 · 白方行棋</figcaption></figure></div>`, "西洋棋戰術入門");
+
+addSlide(`<div class="slide-grid"><div><h2>棋盤與走法記號</h2><p class="lead">下方是白方。左右為 a–h，上下為 1–8。e5 就是 e 線與第 5 橫列交會的格子。</p><p class="detail">K 王、Q 后、R 車、B 象、N 馬。兵的走法通常省略棋子代號。<br>「x」代表吃子，「+」代表將軍，「#」代表將死。</p><div class="standout">Nf7+ 表示騎士走到 f7，並將軍。</div>${sourceLinks(DATA.notes[0])}<p class="sources-line">記號和座標以本專案的合法棋步示範。</p></div><figure class="board-figure">${boardHTML(DATA.notes[0].fen, ["e5", "f7"])}<figcaption>e5 的白馬，準備跳到 f7</figcaption></figure></div>`, "棋盤與走法記號");
+
+function addTactic(note) {
+  const slide = addSlide(`<div class="slide-grid"><div><p class="eyebrow">${escapeText(note.english)}</p><h2>${escapeText(note.slideTitle)}</h2><p class="lead">${escapeText(note.slideText)}</p><p class="detail">${escapeText(note.recognize)}</p><div class="quiz-slot"></div>${sourceLinks(note)}</div><div class="example-slot"></div></div>`, note.title);
+  mountExample(slide.querySelector(".example-slot"), note);
+  mountQuiz(slide.querySelector(".quiz-slot"), note);
+}
+
+addTactic(DATA.notes[0]);
+addTactic(DATA.notes[1]);
+
+addSlide(`<div><h2>牽制與串擊的差別</h2><p class="lead">沿著攻擊方向，先看哪一個目標在前面。</p><div class="table-scroll"><table class="comparison"><thead><tr><th>戰術</th><th>攻擊線上的排列</th><th>想達到的效果</th></tr></thead><tbody><tr><td>本課的絕對牽制</td><td>白車、黑馬、黑王</td><td>黑馬必須繼續擋住王</td></tr><tr><td>下一課的串擊</td><td>白象、黑王、黑車</td><td>黑王移開後，吃後方的車</td></tr></tbody></table></div><p class="detail">絕對牽制的棋子不能露出對己方王的將軍。能否沿牽制線移動，仍要看棋子的走法。</p><div class="sources-line">Wiki <a href="./wiki.html?topic=pin">絕對牽制</a><a href="./wiki.html?topic=skewer">串擊</a>來源 <a href="./sources.html#S02">S02</a><a href="./sources.html#S03">S03</a></div></div>`, "牽制與串擊的差別");
+
+DATA.notes.slice(2).forEach(addTactic);
+
+addSlide(`<div><h2>尋找戰術的方法</h2><p class="lead">先找能將軍的走法，再確認對手有哪些合法回應。</p><ol><li>觀察國王的位置，以及沒有保護的棋子。</li><li>找同時攻擊兩個目標，或打開攻擊線的機會。</li><li>算完對手的回應，再判斷能否得子或將死。</li></ol><p class="detail">這是本課依照五篇 Wiki 筆記整理的練習順序。每一局仍要重新計算。</p><div class="sources-line">課程歸納依據 ${DATA.notes.map(note => `<a href="./wiki.html?topic=${note.id}">${escapeText(note.title)}</a>`).join("")}</div></div>`, "尋找戰術的方法");
+
+addSlide(`<div><h2>兩個容易混淆的判斷</h2><div class="table-scroll"><table class="comparison"><thead><tr><th>觀察</th><th>還需要確認什麼？</th></tr></thead><tbody><tr><td>露出白車的攻擊，而且有將軍</td><td>是誰在將軍？本課由移動的馬將軍，屬於閃擊。露出來的棋子將軍，才稱為閃將。</td></tr><tr><td>黑王被將軍，旁邊有自己的兵</td><td>是否還能逃王、吃掉攻擊者或擋住攻擊線？全部都無法做到，才是將死。</td></tr></tbody></table></div><div class="sources-line">Wiki <a href="./wiki.html?topic=discovered">閃擊</a><a href="./wiki.html?topic=back-rank">底線將死</a>來源 <a href="./sources.html#S04">S04</a><a href="./sources.html#S05">S05</a></div></div>`, "兩個容易混淆的判斷");
+
+addSlide(`<div><h2>五個戰術的辨識線索</h2><div class="table-scroll"><table><thead><tr><th>戰術</th><th>先觀察的線索</th><th>回到 Wiki</th></tr></thead><tbody>${DATA.notes.map(note => `<tr><td>${escapeText(note.title)}</td><td>${escapeText(note.recognize)}</td><td><a href="./wiki.html?topic=${note.id}">閱讀筆記</a></td></tr>`).join("")}</tbody></table></div><p class="detail">可以返回第 3、4、6、7、8 頁，重新作答五道練習。</p></div>`, "五個戰術的辨識線索");
+
+addSlide(`<div><h2>Wiki 與資料來源</h2><p class="detail">簡報的概念與定義從 Wiki 筆記產生。棋局由本專案自製，再用 python-chess 驗證。以下五篇文章均於 2026 年 11 月 22 日閱讀並摘要。</p><ol class="source-deck-list">${DATA.sources.map(source => `<li><a href="./sources.html#${source.id}">${source.id} · ${escapeText(source.title)}</a><span class="muted"> · ${escapeText(source.publisher)}</span></li>`).join("")}</ol><p><a class="primary" href="./index.html">探索完整 Wiki</a> <a class="secondary" href="./workflow.html">閱讀流程與檢查紀錄</a></p></div>`, "Wiki 與資料來源");
+
+const previous = document.querySelector("#previous");
+const next = document.querySelector("#next");
+let current = 0;
+function showSlide(index) {
+  current = Math.min(sections.length - 1, Math.max(0, index));
+  sections.forEach((section, i) => { section.hidden = i !== current; });
+  previous.disabled = current === 0;
+  next.disabled = current === sections.length - 1;
+  document.querySelector("#slide-count").textContent = `${current + 1} / ${sections.length}`;
+  const progress = document.querySelector("#slide-progress");
+  progress.max = sections.length;
+  progress.value = current + 1;
+  document.title = `${current + 1}. ${sections[current].getAttribute("aria-label")} · 棋盤筆記`;
+}
+function navigate(index) {
+  showSlide(index);
+  history.replaceState(null, "", `#slide-${current + 1}`);
+  window.scrollTo(0, 0);
+}
+function readHash() {
+  const match = /^#slide-(\d+)$/.exec(location.hash);
+  showSlide(match ? Number(match[1]) - 1 : 0);
+}
+previous.addEventListener("click", () => navigate(current - 1));
+next.addEventListener("click", () => navigate(current + 1));
+window.addEventListener("hashchange", readHash);
+document.addEventListener("keydown", event => {
+  if (event.target.closest("button,a,input,textarea,select")) return;
+  if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") { event.preventDefault(); navigate(current + 1); }
+  if (event.key === "ArrowLeft" || event.key === "PageUp") { event.preventDefault(); navigate(current - 1); }
+  if (event.key === "Home") { event.preventDefault(); navigate(0); }
+  if (event.key === "End") { event.preventDefault(); navigate(sections.length - 1); }
+});
+document.querySelector("#fullscreen").addEventListener("click", async () => {
+  try {
+    if (document.fullscreenElement) await document.exitFullscreen();
+    else await document.documentElement.requestFullscreen();
+  } catch {
+    document.querySelector("#deck-status").textContent = "瀏覽器無法開啟全螢幕。你仍可使用上一頁與下一頁瀏覽。";
+  }
+});
+document.addEventListener("fullscreenchange", () => {
+  document.querySelector("#fullscreen").textContent = document.fullscreenElement ? "離開全螢幕" : "全螢幕";
+});
+readHash();
+</script></body></html>
