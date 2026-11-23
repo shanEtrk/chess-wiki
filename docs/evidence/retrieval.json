@@ -1,0 +1,48 @@
+[
+  {
+    "query": "騎士 雙攻",
+    "top_note": "fork",
+    "source_ids": [
+      "S01"
+    ],
+    "used_for": "簡報的「騎士雙攻」頁與練習題",
+    "definition": "一顆棋子同時攻擊兩個以上目標。本課用騎士同時將軍並攻擊黑后。"
+  },
+  {
+    "query": "絕對 牽制",
+    "top_note": "pin",
+    "source_ids": [
+      "S02"
+    ],
+    "used_for": "簡報的「絕對牽制」頁與練習題",
+    "definition": "棋子擋在攻擊者和己方國王之間。它不能走出攻擊線，讓己方國王暴露在將軍之下。"
+  },
+  {
+    "query": "串擊",
+    "top_note": "skewer",
+    "source_ids": [
+      "S03",
+      "S02"
+    ],
+    "used_for": "簡報的「串擊」頁與練習題",
+    "definition": "沿著一條線先攻擊前方較重要的目標。前方目標移開後，後方棋子就暴露出來。"
+  },
+  {
+    "query": "閃擊 閃將",
+    "top_note": "discovered",
+    "source_ids": [
+      "S04"
+    ],
+    "used_for": "簡報的「閃擊」頁與練習題",
+    "definition": "移開擋路的己方棋子，讓另一顆己方棋子露出攻擊。"
+  },
+  {
+    "query": "底線 將死",
+    "top_note": "back-rank",
+    "source_ids": [
+      "S05"
+    ],
+    "used_for": "簡報的「底線將死」頁與練習題",
+    "definition": "守方國王的逃路被自己的棋子封住，攻方用車或后控制底線完成將死。"
+  }
+]
